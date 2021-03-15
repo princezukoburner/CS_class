@@ -1,0 +1,55 @@
+def triangle():
+    print("     /\     ")
+    print("    /  \    ")
+    print("   /    \   ")
+    print("  +------+  ")
+
+def box():
+    print("  +------+  ")
+    print("  |      |  ")
+    print("  |      |  ")
+    print("  +------+  ")
+
+def box_two():
+    print("  /__\/__\  ")
+    print("   ^^  ^^   ")
+    print("   ^^  ^^   ")
+    print("   ^^  ^^   ")
+    print("  {******}  ")
+
+def rocket():
+    triangle()
+    box()
+    box()
+    box()
+    box_two()   
+
+rocket()
+
+## Part 2 ##
+
+def sumSeries(a, b, c):
+    return (b/2) * (2 * a + (b-1) * c)
+
+startNumber = int(input("Start number: "))
+numberOfNumbers = int(input("Number of terms: "))
+differenceBetween = int(input("Difference in terms: "))
+
+sum = sumSeries(startNumber, numberOfNumbers, differenceBetween)
+print(sum)
+
+
+"""sum = sumSeries(2, 10, -5)
+print(sum)""" #used this to double check my answers, (remember). not included in final code
+
+## Part 3 ##
+
+def printFactors(num):
+    for i in range(1, num): #note:  remember 1 is a factor of every num, make range begin there
+        if num % i == 0:
+            print(i)
+    print(num)  
+
+num = int(input("Please enter any number greater than zero: "))
+printFactors(num)
+        
