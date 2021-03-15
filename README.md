@@ -1,5 +1,7 @@
 # CS_class
 Rocket and Home (turtle)
+
+
 ##### House 3d #####
 import turtle
 import math
@@ -160,3 +162,46 @@ mordi.left(45)
 mordi.penup()
 mordi.goto(-100, -150)
 mordi.left(90)
+
+##### RKT  ######
+
+import turtle
+
+screen = turtle.Screen()
+screen.bgcolor("skyblue")
+q = turtle.Turtle()
+
+q.speed(2)
+
+
+def body(v, w, x, y, z): 
+    q.up()
+    q.goto(x, y)
+    q.down()
+    q.color(z)
+    q.begin_fill()
+    for i in range(2):
+        q.fd(w)
+        q.rt(90)
+        q.fd(v)
+        q.rt(90)
+        q.end_fill()
+
+
+body(250, 100, 25, 300, "red")
+body(250, 50, 0, 250, "purple")
+body(250, 50, 100, 250, "orange")
+
+
+q.up()
+q.goto(25, 300)
+q.down()
+q.color("pink")
+q.begin_fill()
+for i in range(3):
+    q.fd(100)
+    q.lt(180-60)
+    q.end_fill()
+
+q.ht()
+
