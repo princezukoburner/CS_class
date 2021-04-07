@@ -1,0 +1,74 @@
+#Question 6
+
+def findDiscount(num, price):
+    final = num * price
+    if num > 10:
+        final *= 0.9
+    else:
+        return final
+
+print(findDiscount(3, 14))
+
+#Question 7
+
+import math 
+
+def findTriangleArea(a, b, c):
+    s = (a + b + c) / 2
+    a = math.sqrt(s * (s - a) * (s - b) * (s - c))
+    return a
+
+a = findTriangleArea(80, 18, 82)
+print(a)
+
+#Question 8
+
+import turtle
+win = turtle.Screen()
+win.bgcolor("white")
+win.title("Exam 3")
+win.setup(500,500)
+
+
+penTurtle = turtle.Turtle()
+size = 30
+
+penTurtle.forward(size)
+penTurtle.right(90)
+penTurtle.forward(size)
+penTurtle.right(90)
+penTurtle.forward(size)
+penTurtle.right(90)
+penTurtle.forward(size)
+penTurtle.right(90)
+
+penTurtle.fillcolor("black")
+penTurtle.begin_fill() 
+penTurtle.backward(size)
+penTurtle.left(90)
+penTurtle.forward(size)
+penTurtle.right(90)
+penTurtle.forward(size)
+penTurtle.right(90)
+penTurtle.forward(size)
+penTurtle.end_fill()
+
+
+#Question 9
+
+import random 
+m_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+
+print("Your first list is", m_list)
+
+for i in range(len(m_list)):
+      m_list[i] = m_list[i] +5
+print("Your second list is", m_list)
+
+for i in m_list:
+        print("The list has the number", i)
+
+randomo = random.choice(m_list)
+m_list.remove(randomo)
+print("The list with one number removed is", m_list)
